@@ -2,16 +2,16 @@
 from time import sleep
 import re
 
-help_msg = '''------ §aMCDR TPS检测插件帮助信息 §f------
-§b!!tps help §f- §c显示此帮助信息
-§b!!tps §f- §c测试服务器tps
-§b!!tps [秒] §f- §c测试服务器tps, [秒] 测试时间
+help_msg = '''------ §aMCDR TPSRemake检测插件帮助信息 §f------
+§b!!tpsr help §f- §c显示本帮助信息
+§b!!tpsr §f- §c显示当前服务器tps
+§b!!tpsr [秒] §f- §c测试服务器tps, [秒] 测试时间
 --------------------------------'''
 
 
 def on_info(server, info):
     if info.is_player == 1:
-        if info.content.startswith('!!tps'):
+        if info.content.startswith('!!tpsr'):
             args = info.content.split(' ')
             if len(args) == 1:
                 server.execute('debug start')
@@ -31,5 +31,5 @@ def on_info(server, info):
         server.say("------ §a当前服务器TPS为 §e" + split + " §f------")
 
 def on_load(server, info):
-    server.add_help_message('!!tps help', 'TPS检测帮助')
+    server.add_help_message('!!tpsr help', 'TPS检测帮助')
 © 2020 GitHub, Inc.

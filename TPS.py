@@ -2,8 +2,8 @@
 from time import sleep
 import re
 
-help_msg = '''------ §aMCDR TPSRemake检测插件帮助信息 §f------
-§b!!tpsr help §f- §c显示本帮助信息
+help_msg = '''------ §aMCDR TPSRemake帮助信息 §f------
+§b!!tpsr help §f- §c显示这个帮助信息
 §b!!tpsr §f- §c显示当前服务器tps
 §b!!tpsr [秒] §f- §c测试服务器tps, [秒] 测试时间
 --------------------------------'''
@@ -32,4 +32,3 @@ def on_info(server, info):
 
 def on_load(server, info):
     server.add_help_message('!!tpsr help', 'TPS检测帮助')
-© 2020 GitHub, Inc.
